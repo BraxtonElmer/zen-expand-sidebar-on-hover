@@ -133,45 +133,58 @@
 /* Button labels */
 
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover .toolbarbutton-text {
-    display: flex !important;
+    display: -moz-box !important;
 }
 
-/* New tab button */
-/* New tab button - force icon and text to show on hover */
+/* New tab button - keep icon visible always */
+#tabs-newtab-button,
+#vertical-tabs-newtab-button {
+    -moz-box-align: center !important;
+    -moz-box-orient: horizontal !important;
+}
+
+#tabs-newtab-button .toolbarbutton-icon,
+#vertical-tabs-newtab-button .toolbarbutton-icon {
+    display: -moz-box !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* New tab button on hover - show text and full background */
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover #tabs-newtab-button,
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover #vertical-tabs-newtab-button {
     display: -moz-box !important;
     -moz-box-align: center !important;
     -moz-box-orient: horizontal !important;
+    -moz-box-pack: start !important;
     background-color: transparent !important;
     border-radius: 6px !important;
     margin: 2px 4px !important;
     padding: 0 8px !important;
     height: 32px !important;
-    width: auto !important;
+    min-width: calc(var(--hover-width) - 8px) !important;
 }
 
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover #tabs-newtab-button .toolbarbutton-icon,
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover #vertical-tabs-newtab-button .toolbarbutton-icon {
-    display: -moz-box !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 16px !important;
-    height: 16px !important;
     margin-inline-end: 8px !important;
 }
 
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover #tabs-newtab-button .toolbarbutton-text,
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover #vertical-tabs-newtab-button .toolbarbutton-text {
     display: -moz-box !important;
+    -moz-box-flex: 1 !important;
     visibility: visible !important;
     opacity: 1 !important;
+    width: auto !important;
+    max-width: none !important;
 }
 
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover #tabs-newtab-button:hover,
 :root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover #vertical-tabs-newtab-button:hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
 }
+
 
 
 /* Tab background */
