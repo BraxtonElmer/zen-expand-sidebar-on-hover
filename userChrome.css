@@ -56,12 +56,17 @@
     opacity: 1 !important;
     visibility: visible !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
     white-space: nowrap !important;
     width: auto !important;
     min-width: 0 !important;
     max-width: none !important;
     color: inherit !important;
+}
+
+/* Fade effect on tab label container for overflow */
+:root:not([zen-sidebar-expanded="true"]) #navigator-toolbox:hover .zen-workspace-normal-tabs-section .tabbrowser-tab .tab-label-container {
+    mask-image: linear-gradient(to right, black calc(100% - 20px), transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 20px), transparent 100%) !important;
 }
 
 /* Tab content layout */
