@@ -1,0 +1,11 @@
+{
+  "name": "Expand Sidebar On Hover",
+  "description": "Expands the collapsed sidebar on hover to show tab titles",
+  "version": "1.0.0",
+  "author": "Braxton Elmer",
+  "homepage": "https://github.com/BraxtonElmer/zen-expand-sidebar-on-hover",
+  "updateUrl": "",
+  "readme": "README.md",
+  "tags": ["sidebar", "ui"],
+  "include": ["userChrome.css"]
+}
